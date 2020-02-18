@@ -13,6 +13,7 @@ export const StyledMenu = styled.nav`
   top: 0;
   right: 0;
   padding-top: 0px;
+  padding-bottom: 0px;
   transition: transform 0.3s ease-in-out;
   z-index: 1;
   /*width: 100vw;*/
