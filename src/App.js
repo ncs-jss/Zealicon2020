@@ -51,7 +51,7 @@ class App extends React.Component {
           };
         }
       });
-    }, 5000);
+    }, 3000);
   }
   componentWillUnmount() {
     if (this.sliderInterval) clearInterval(this.sliderInterval);

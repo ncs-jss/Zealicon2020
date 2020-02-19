@@ -5,24 +5,22 @@ export const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: center;
   background: #000;
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
+  width: ${({ open }) => (open ? "100%" : "0")};
   height: 100vh;
   text-align: right;
-  padding: 2rem;
   position: absolute;
   top: 0;
   right: 0;
   padding-top: 0px;
   padding-bottom: 0px;
-  transition: transform 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
   z-index: 1;
   /*width: 100vw;*/
   overflow: hidden !important;
-  width: 100%;
 
   a {
     font-size: 1.2rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
     padding: 1rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;

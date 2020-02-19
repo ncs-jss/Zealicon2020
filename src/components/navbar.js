@@ -27,7 +27,7 @@ const Navbar = () => {
         <li>
           <Link to="/">
             <img
-              src="https://i.ibb.co/p4JQxXV/Logo-Final-1-2x.png"
+              src="https://i.ibb.co/DKcQwp4/Logo-Final.png"
               alt="Logo-Final-1"
               border="0"
               className="logo-image"
@@ -37,7 +37,7 @@ const Navbar = () => {
 
         <ul>
           <li>
-            <Link to="/team">
+            <Link to="/categories">
               <span className="navbar-link">EVENTS</span>
             </Link>
           </li>

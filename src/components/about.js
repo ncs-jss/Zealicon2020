@@ -2,63 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Team = () => {
-  const ctc = [
-    {
-      img: "",
-      name: "Devansh Chaudhary",
-      post: "Design Head"
-    },
-    {
-      img: "",
-      name: "Devansh Chaudhary",
-      post: "Design Head"
-    },
-    {
-      img: "",
-      name: "Devansh Chaudhary",
-      post: "Design Head"
-    },
-    {
-      img: "",
-      name: "Devansh Chaudhary",
-      post: "Design Head"
-    },
-    {
-      img: "",
-      name: "Devansh Chaudhary",
-      post: "Design Head"
-    },
-    {
-      img: "",
-      name: "Devansh Chaudhary",
-      post: "Design Head"
-    },
-    {
-      img: "",
-      name: "Devansh Chaudhary",
-      post: "Design Head"
-    },
-    {
-      img: "",
-      name: "Devansh Chaudhary",
-      post: "Design Head"
-    },
-    {
-      img: "",
-      name: "Devansh Chaudhary",
-      post: "Design Head"
-    },
-    {
-      img: "",
-      name: "Devansh Chaudhary",
-      post: "Design Head"
-    },
-    {
-      img: "",
-      name: "Devansh Chaudhary",
-      post: "Design Head"
-    }
-  ];
   return (
     <div className="team pt-5">
       <div className="team-top container-fluid">
@@ -88,7 +31,7 @@ const Team = () => {
           </svg>
         </Link>
         <img
-          src="https://i.ibb.co/p4JQxXV/Logo-Final-1-2x.png"
+          src="https://i.ibb.co/DKcQwp4/Logo-Final.png"
           alt="Logo-Final-1"
           border="0"
           className="logo-image"

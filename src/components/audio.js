@@ -5,10 +5,12 @@ import sound3 from "../audio/3.mp3";
 import sound4 from "../audio/4.mp3";
 import sound5 from "../audio/5.mp3";
 import { isMobile } from "../helpers/utils";
+import { withRouter } from "react-router-dom";
+
 const useAudio = url => {
   const sounds = [sound1, sound2, sound3, sound4, sound5];
   const [currentSound, changeSound] = useState(
-    Math.floor(Math.random() * Math.floor(3))
+    Math.floor(Math.random() * Math.floor(5))
   );
   const [volume, setVolume] = useState(1);
 
@@ -58,10 +60,11 @@ const useAudio = url => {
   }, [playing]);
 
   useEffect(() => {
+    setPlaying(true);
     audio.addEventListener("ended", () => {
       async function f() {
         setPlaying(false);
-        console.log("inside async", currentSound);
+
         return (currentSound + 1) % 5;
       }
 
@@ -72,6 +75,13 @@ const useAudio = url => {
       });
     });
     return () => {
+      setPlaying(false);
+      console.log(audio.duration);
+
+      if (!isNaN(audio.duration)) {
+        audio.currentTime = parseInt(audio.duration);
+        console.log(audio.duration);
+      }
       audio.removeEventListener("ended", () => setPlaying(false));
     };
   }, [audio]);
@@ -234,7 +244,7 @@ const Player = ({ url }) => {
                 width="19.564"
                 height="23.5"
                 viewBox="0 0 19.564 23.5"
-                className="mr-3"
+                className={isMobile() ? "" : "mr-3"}
                 onClick={forward}
               >
                 <g transform="translate(-176 -159)">
@@ -409,4 +419,4 @@ const Player = ({ url }) => {
   );
 };
 
-export default Player;
+export default withRouter(Player);

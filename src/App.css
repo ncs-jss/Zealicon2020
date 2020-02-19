@@ -1,6 +1,7 @@
 body {
   margin: 0;
   overflow-x: hidden !important;
+  max-width: 100vw;
   box-sizing: border-box;
   /*text-rendering: optimizeLegibility;*/
   color: #fff;
@@ -14,6 +15,7 @@ body {
 *::after,
 *::before {
   box-sizing: border-box;
+  outline: 0;
 }
 header {
   /*overflow: hidden;*/
@@ -90,12 +92,12 @@ header label:after {
 }
 
 .logo-image {
-  margin-top: -20px;
+  margin-top: -10px;
 
-  height: 100px;
+  height: 75px;
 }
 .logo-image-mobile {
-  width: 50vw;
+  width: 40vw;
 }
 .navbar-link {
   color: #fff;
@@ -186,7 +188,7 @@ header label:after {
   right: 0;
   bottom: 0;
   left: 0;
-  overflow: hidden;
+  overflow: hidden !important;
   z-index: -100;
   height: 100vh;
   width: 100vw;
@@ -210,6 +212,7 @@ header label:after {
   align-items: center;
   flex-direction: column;
   color: #fff;
+  overflow: hidden !important;
 }
 .date {
   font-size: 28px;
@@ -249,7 +252,7 @@ header label:after {
 }
 
 .bottom-bar {
-  position: fixed;
+  position: absolute;
   bottom: 0px;
   padding: 10px 0;
   left: 0;
@@ -291,6 +294,7 @@ header label:after {
 .team-top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .team-heading {
@@ -392,4 +396,80 @@ svg:hover {
   .about-content {
     font-size: 20px;
   }
+}
+
+.category {
+  background-image: url(https://i.ibb.co/nRdzRYD/Main-event-BG.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
+  overflow: hidden;
+}
+
+.category-page {
+  height: 85vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.single-category {
+  position: relative;
+}
+
+.category-text {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+}
+
+.spiral-image {
+  -webkit-animation: rotation 6s infinite linear;
+  animation: rotation 6s infinite linear;
+  transition: all 6s ease-in-out;
+  cursor: pointer;
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .category-text {
+    font-size: 12px;
+  }
+  .category-page {
+    height: 65vh;
+  }
+  .owl-theme .owl-nav {
+    margin-top: 30px !important;
+  }
+}
+
+.owl-carousel .owl-stage-outer {
+  overflow: visible !important;
 }

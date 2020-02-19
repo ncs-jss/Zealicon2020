@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import Team from "./components/team";
 import About from "./components/about";
+import Categories from "./components/category";
 import * as serviceWorker from "./serviceWorker";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
@@ -17,6 +18,7 @@ const Root = () => (
       <Route path="/" component={App} exact />
       <Route path="/team" component={Team} exact />
       <Route path="/about" component={About} exact />
+      <Route path="/categories" component={Categories} exact />
     </Switch>
   </BrowserRouter>
 );

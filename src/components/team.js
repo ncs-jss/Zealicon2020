@@ -48,7 +48,7 @@ const Team = () => {
       post: "Cultural Head"
     },
     {
-      img: "https://i.ibb.co/cTW9Wzv/pp6.png",
+      img: "",
       name: "Shubham Singh",
       post: "Security Head"
     },
@@ -96,7 +96,7 @@ const Team = () => {
     {
       img: "https://i.ibb.co/C79Kbdv/p6.png",
       name: "Ishita",
-      post: "P.A. System Head"
+      post: "Marketing Head"
     },
     {
       img: "",
@@ -107,16 +107,6 @@ const Team = () => {
       img: "https://i.ibb.co/4VppMwn/p9.png",
       name: "Tijil Shandilya",
       post: "Resource Head"
-    },
-    {
-      img: "",
-      name: "Prakhar",
-      post: "Applications Head"
-    },
-    {
-      img: "",
-      name: "Shivam",
-      post: "Applications Head"
     }
   ];
 
@@ -146,11 +136,15 @@ const Team = () => {
       name: "Kumar Rohit",
       post: "Design Lead"
     },
-
     {
       img: "https://i.ibb.co/82K4TW7/p9.png",
       name: "Sourabh Singh",
       post: "Developer"
+    },
+    {
+      img: "https://i.ibb.co/XJxBLD7/p17.png",
+      name: "Shubham Pathak",
+      post: "App Developer"
     },
     {
       img: "https://i.ibb.co/XY4H8Tm/p15.png",
@@ -161,6 +155,11 @@ const Team = () => {
       img: "https://i.ibb.co/Jc2GqXS/p12.png",
       name: "Viral Luke",
       post: "Designer"
+    },
+    {
+      img: "",
+      name: "Saksham",
+      post: "Developer"
     },
     {
       img: "",
@@ -202,7 +201,7 @@ const Team = () => {
           </svg>
         </Link>
         <img
-          src="https://i.ibb.co/p4JQxXV/Logo-Final-1-2x.png"
+          src="https://i.ibb.co/DKcQwp4/Logo-Final.png"
           alt="Logo-Final-1"
           border="0"
           className="logo-image"
@@ -256,7 +255,11 @@ const Team = () => {
             return (
               <div className="col-md-2 mt-2 mb-3 col-6 text-center" key={index}>
                 {data.img.length > 2 ? (
-                  <img src={data.img} />
+                  <img
+                    src={data.img}
+                    style={{ width: "100%" }}
+                    className="team-image"
+                  />
                 ) : (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -301,7 +304,11 @@ const Team = () => {
             return (
               <div className="col-md-2 mt-2 mb-3 col-6 text-center" key={index}>
                 {data.img.length > 2 ? (
-                  <img src={data.img} />
+                  <img
+                    src={data.img}
+                    style={{ width: "100%" }}
+                    className="team-image"
+                  />
                 ) : (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
