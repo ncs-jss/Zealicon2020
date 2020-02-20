@@ -2,8 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Team = () => {
+  const back =
+    "https://i.ibb.co/qYSFLVf/sebastian-ervi-Qq2h76k-YRFI-unsplash.jpg";
   return (
-    <div className="team pt-5">
+    <div
+      className="team pt-5"
+      style={{
+        backgroundImage: `url(${back})`,
+        backgroundBlendMode: "multiply",
+        backgroundColor: "rgba(0,0,0,0.65)"
+      }}
+    >
       <div className="team-top container-fluid">
         <Link to="/">
           <svg

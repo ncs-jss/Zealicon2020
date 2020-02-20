@@ -18,7 +18,7 @@ const Root = () => (
       <Route path="/" component={App} exact />
       <Route path="/team" component={Team} exact />
       <Route path="/about" component={About} exact />
-      <Route path="/categories" component={Categories} exact />
+      <Route path="/events" component={Categories} exact />
     </Switch>
   </BrowserRouter>
 );

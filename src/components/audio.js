@@ -47,12 +47,13 @@ const useAudio = url => {
 
   const toggle = () => setPlaying(!playing);
   const changeVolume = () => {
-    if (volume) {
+    if (volume === 1) {
       audio.volume = 0;
+      setVolume(0);
     } else {
       audio.volume = 1;
+      setVolume(1);
     }
-    setVolume(!volume);
   };
 
   useEffect(() => {
@@ -61,6 +62,7 @@ const useAudio = url => {
 
   useEffect(() => {
     setPlaying(true);
+
     audio.addEventListener("ended", () => {
       async function f() {
         setPlaying(false);
@@ -70,17 +72,18 @@ const useAudio = url => {
 
       f().then(res => {
         changeSound(res);
+        audio.volume = volume;
         changeAudio(new Audio(sounds[res]));
         setPlaying(true);
+        audio.volume = volume;
       });
     });
     return () => {
       setPlaying(false);
-      console.log(audio.duration);
 
+      audio.volume = volume;
       if (!isNaN(audio.duration)) {
         audio.currentTime = parseInt(audio.duration);
-        console.log(audio.duration);
       }
       audio.removeEventListener("ended", () => setPlaying(false));
     };
@@ -260,7 +263,7 @@ const Player = ({ url }) => {
                   />
                 </g>
               </svg>
-              {volume ? (
+              {volume === 1 ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="29.111"
@@ -348,7 +351,7 @@ const Player = ({ url }) => {
                   />
                 </g>
               </svg>
-              {volume ? (
+              {volume === 1 ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="29.111"

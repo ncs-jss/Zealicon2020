@@ -13,12 +13,12 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/dashboard">
+            <Link to="/">
               <span className="navbar-link">SPONSORS</span>
             </Link>
           </li>
           <li>
-            <Link to="/dashboard">
+            <Link to="/">
               <span className="navbar-link">REGISTER</span>
             </Link>
           </li>
@@ -37,12 +37,12 @@ const Navbar = () => {
 
         <ul>
           <li>
-            <Link to="/categories">
+            <Link to="/events">
               <span className="navbar-link">EVENTS</span>
             </Link>
           </li>
           <li>
-            <Link to="/dashboard">
+            <Link to="/">
               <span className="navbar-link">PRONITES</span>
             </Link>
           </li>

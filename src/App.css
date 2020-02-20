@@ -229,16 +229,19 @@ header label:after {
     font-weight: bold;
   }
 }
-.circle0,
-.circle1,
-.circle2 {
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.2);
+.circle00,
+.circle01,
+.circle02,
+.circle03,
+.circle04 {
+  border-radius: 30%;
+  background-color: rgba(0, 0, 0, 0.05);
   width: 100vw;
   height: calc(100vh - 50px);
   position: absolute;
   opacity: 0;
-  animation: scaleIn 3s infinite cubic-bezier(0.36, 0.11, 0.89, 0.32);
+  animation: scaleIn 1s 0.25s cubic-bezier(0.36, 0.11, 0.89, 0.32);
+  animation-fill-mode: forwards;
 }
 @keyframes scaleIn {
   from {
@@ -246,7 +249,31 @@ header label:after {
     opacity: 0.5;
   }
   to {
-    transform: scale(5, 5);
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+.circle10,
+.circle11,
+.circle12,
+.circle13,
+.circle14 {
+  border-radius: 30%;
+  background-color: rgba(0, 0, 0, 0.025);
+  width: 100vw;
+  height: calc(100vh - 50px);
+  position: absolute;
+  opacity: 0;
+  animation: scaleIn 1s cubic-bezier(0.36, 0.11, 0.89, 0.32);
+  animation-fill-mode: forwards;
+}
+@keyframes scaleIn {
+  from {
+    transform: scale(0, 0.2);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1, 1);
     opacity: 0;
   }
 }
@@ -394,7 +421,7 @@ svg:hover {
     padding-right: 1rem !important;
   }
   .about-content {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
@@ -404,18 +431,19 @@ svg:hover {
   background-repeat: no-repeat;
   background-position: fixed;
   height: 100vh;
+  max-height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: multiply;
   overflow: hidden;
 }
 
 .category-page {
-  height: 85vh;
+  height: 90vh;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .single-category {
