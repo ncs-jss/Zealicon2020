@@ -486,6 +486,10 @@ svg:hover {
   }
 }
 
+.owl-theme .owl-nav {
+  margin-top: 40px !important;
+}
+
 @media (max-width: 768px) {
   .category-text {
     font-size: 12px;
@@ -500,4 +504,264 @@ svg:hover {
 
 .owl-carousel .owl-stage-outer {
   overflow: visible !important;
+}
+
+.event {
+  background-image: url("https://i.ibb.co/vYz8f14/Events-BG-2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: multiply;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.navbar {
+  padding: 15px 10px;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+  box-shadow: none;
+  outline: none !important;
+  border: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  overflow-y: hidden;
+}
+
+#sidebar {
+  min-width: 350px;
+  max-width: 350px;
+  color: rgba(255, 255, 255, 0.4) !important;
+  transition: all 0.3s;
+  height: 100vh;
+  overflow-y: scroll;
+  color: #fff !important;
+}
+@media (max-width: 768px) {
+  #sidebar {
+    min-width: 250px;
+    max-width: 250px;
+  }
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+  padding-top: 4rem;
+  padding-bottom: 0;
+
+  padding-left: 3rem;
+  padding-bottom: 2rem;
+}
+
+#sidebar ul.components {
+  padding-left: 3rem;
+  font-family: bahnschrift_reg;
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  #sidebar ul.components {
+    padding-left: 3rem;
+  }
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li span {
+  padding: 10px;
+  font-size: 22px;
+  display: block;
+}
+#sidebar ul li span:hover {
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  #sidebar ul li span {
+    font-size: 0.75em;
+  }
+}
+
+.active {
+  color: #fff !important;
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #6d7fcc;
+}
+
+ul.CTAs {
+  padding: 20px;
+}
+
+ul.CTAs a {
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+a.download {
+  background: #fff;
+  color: #7386d5;
+}
+
+a.article,
+a.article:hover {
+  background: #6d7fcc !important;
+  color: #fff !important;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+    ----------------------------------------------------- */
+
+#content {
+  width: 100%;
+  padding: 20px;
+  max-height: 100vh;
+  transition: all 0.3s;
+  overflow-y: scroll !important;
+}
+#sidebar::-webkit-scrollbar {
+  width: 2px;
+}
+
+#sidebar::-webkit-scrollbar-track {
+  background-color: #555;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  width: 5px !important;
+}
+#content::-webkit-scrollbar {
+  width: 2px;
+}
+
+#content::-webkit-scrollbar-track {
+  background-color: #555;
+}
+
+#content::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  width: 5px !important;
+}
+/* ---------------------------------------------------
+    MEDIAQUERIES
+    ----------------------------------------------------- */
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #sidebarCollapse span {
+    display: none;
+  }
+}
+#side_event li a {
+  text-transform: capitalize !important;
+}
+.white_image {
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .white_image {
+    text-align: center;
+    padding-top: 10px;
+  }
+}
+.btn-link {
+  background-color: transparent !important;
+  border: none;
+  color: #fff !important;
+  border: 2px solid #fff !important;
+}
+.btn-link:hover,
+.btn-link:active,
+.btn-link:focus,
+.btn-link:target {
+  border: 2px solid #fff !important;
+  background-color: transparent;
+  outline: 0 !important;
+  color: #fff !important;
+}
+*:focus {
+  outline: 0 !important;
+}
+
+.svg-inline--fa.fa-w-14 {
+  width: 0.875em;
+}
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+
+.btn-link {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.eventHead {
+  font-size: 40px;
+  padding-top: 3rem;
+}
+
+.activeside {
+  color: red !important;
+}
+
+@media (max-width: 768px) {
+  .eventHead {
+    font-size: 24px;
+    padding-top: 1rem;
+  }
 }

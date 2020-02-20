@@ -5,6 +5,7 @@ import App from "./App";
 import Team from "./components/team";
 import About from "./components/about";
 import Categories from "./components/category";
+import Event from "./components/event";
 import * as serviceWorker from "./serviceWorker";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
@@ -19,6 +20,7 @@ const Root = () => (
       <Route path="/team" component={Team} exact />
       <Route path="/about" component={About} exact />
       <Route path="/events" component={Categories} exact />
+      <Route path="/events/:categoryId" component={Event} exact />
     </Switch>
   </BrowserRouter>
 );

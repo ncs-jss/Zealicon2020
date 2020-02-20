@@ -47,54 +47,66 @@ class Category extends React.Component {
         <div className="category-page">
           <OwlCarousel
             className="owl-theme"
-            items={isMobile() ? "2" : "3"}
+            items={isMobile() ? "2" : "4"}
             margin={10}
             nav
             loop
-            // autoplay
+            autoplay
             center
           >
-            <div class="item single-category">
-              <img
-                src="https://i.ibb.co/RDfnzHw/spirograph-2-0.png "
-                className="spiral-image"
-              />
-              <p className="category-text">COLARO</p>
+            <div className="item single-category">
+              <Link to={`/events/1`}>
+                <img
+                  src="https://i.ibb.co/RDfnzHw/spirograph-2-0.png "
+                  className="spiral-image"
+                />
+                <p className="category-text">COLARO</p>
+              </Link>
             </div>
-            <div class="item single-category">
-              <img
-                src="https://i.ibb.co/RDfnzHw/spirograph-2-0.png"
-                className="spiral-image"
-              />
-              <p className="category-text">MECHAVOLTZ</p>
+            <div className="item single-category">
+              <Link to={`/events/2`}>
+                <img
+                  src="https://i.ibb.co/RDfnzHw/spirograph-2-0.png"
+                  className="spiral-image"
+                />
+                <p className="category-text">MECHAVOLTZ</p>
+              </Link>
             </div>
-            <div class="item single-category">
-              <img
-                src="https://i.ibb.co/RDfnzHw/spirograph-2-0.png"
-                className="spiral-image"
-              />
-              <p className="category-text">PLAY IT ON</p>
+            <div className="item single-category">
+              <Link to={`/events/3`}>
+                <img
+                  src="https://i.ibb.co/RDfnzHw/spirograph-2-0.png"
+                  className="spiral-image"
+                />
+                <p className="category-text">PLAY IT ON</p>
+              </Link>
             </div>
-            <div class="item single-category">
-              <img
-                src="https://i.ibb.co/RDfnzHw/spirograph-2-0.png"
-                className="spiral-image"
-              />
-              <p className="category-text">ROBOTILES</p>
+            <div className="item single-category">
+              <Link to={`/events/4`}>
+                <img
+                  src="https://i.ibb.co/RDfnzHw/spirograph-2-0.png"
+                  className="spiral-image"
+                />
+                <p className="category-text">ROBOTILES</p>
+              </Link>
             </div>
-            <div class="item single-category">
-              <img
-                src="https://i.ibb.co/RDfnzHw/spirograph-2-0.png"
-                className="spiral-image"
-              />
-              <p className="category-text">Z-WAR</p>
+            <div className="item single-category">
+              <Link to={`/events/6`}>
+                <img
+                  src="https://i.ibb.co/RDfnzHw/spirograph-2-0.png"
+                  className="spiral-image"
+                />
+                <p className="category-text">Z-WAR</p>
+              </Link>
             </div>
-            <div class="item single-category">
-              <img
-                src="https://i.ibb.co/RDfnzHw/spirograph-2-0.png"
-                className="spiral-image"
-              />
-              <p className="category-text">CODERZ</p>
+            <div className="item single-category">
+              <Link to={`/events/5`}>
+                <img
+                  src="https://i.ibb.co/RDfnzHw/spirograph-2-0.png"
+                  className="spiral-image"
+                />
+                <p className="category-text">CODERZ</p>
+              </Link>
             </div>
           </OwlCarousel>
         </div>

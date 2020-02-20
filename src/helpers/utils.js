@@ -1,3 +1,4 @@
+import axios from "axios";
 export function isMobile() {
   if (!process.browser) {
     return false;
@@ -5,3 +6,14 @@ export function isMobile() {
 
   return global.innerWidth <= 840;
 }
+
+export const axiosGet = (url, data = null) => {
+  const options = {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json;charset=UTF-8"
+    }
+  };
+
+  return axios.get(url, options);
+};
