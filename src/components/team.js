@@ -157,21 +157,27 @@ const Team = () => {
       post: "Designer"
     },
     {
-      img: "",
+      img: "https://i.ibb.co/qsRj2yg/p20.png",
       name: "Saksham",
       post: "Developer"
     },
     {
-      img: "",
+      img: "https://i.ibb.co/LvKc02H/p23.png",
       name: "Rajat Verma",
       post: "Developer"
     },
     {
-      img: "",
+      img: "https://i.ibb.co/NpVrvsx/p21.png",
       name: "Pranav Negi",
       post: "Designer "
+    },
+    {
+      img: "https://i.ibb.co/6mMf4SX/p22.png",
+      name: "Dheeraj Kotwani",
+      post: "App Developer"
     }
   ];
+
   return (
     <div className="team pt-5">
       <div className="team-top container-fluid">

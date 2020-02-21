@@ -43,6 +43,10 @@ class Event extends React.Component {
   }
 
   getEventDetail = id => {
+    this.setState(prevState => ({
+      name: !prevState.name
+    }));
+
     const response = axiosGet("http://backoffice.zealicon.in/api/event/" + id);
     response.then(respo => {
       this.setState({
@@ -92,9 +96,11 @@ class Event extends React.Component {
             <ul className="list-unstyled components" id="side_event">
               {this.state.eventList.map(data => {
                 return (
-                  <li key={data.id}>
+                  <li
+                    key={data.id}
+                    onClick={this.getEventDetail.bind(this, data.id)}
+                  >
                     <span
-                      onClick={this.getEventDetail.bind(this, data.id)}
                       className={`${
                         data.id === individual.id ? "activeside" : ""
                       }`}

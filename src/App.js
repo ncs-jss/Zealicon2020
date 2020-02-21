@@ -36,23 +36,8 @@ class App extends React.Component {
     this.sliderInterval = null;
   }
 
-  componentDidMount() {
-    this.sliderInterval = setInterval(() => {
-      this.setState(prevState => {
-        if (prevState.in === 3) {
-          return {
-            in: 0,
-            selectedImage: this.state.images[0]
-          };
-        } else {
-          return {
-            in: prevState.in + 1,
-            selectedImage: this.state.images[prevState.in + 1]
-          };
-        }
-      });
-    }, 3000);
-  }
+  componentDidMount() {}
+
   componentWillUnmount() {
     if (this.sliderInterval) clearInterval(this.sliderInterval);
   }
@@ -61,12 +46,36 @@ class App extends React.Component {
       <>
         {isMobile() ? <SideBar /> : <NavBar />}
         <Audio />
-
-        <img
-          src={this.state.selectedImage}
-          alt="background"
-          className="fullscreen-bg"
-        />
+        <div
+          class="wave"
+          style={{
+            backgroundImage: `url(${
+              isMobile()
+                ? "https://i.ibb.co/L9GrWzS/phone3.png"
+                : "https://i.ibb.co/hxN2B9f/4-1.png"
+            })`
+          }}
+        ></div>
+        <div
+          class="circle"
+          style={{
+            backgroundImage: `url(${
+              isMobile()
+                ? "https://i.ibb.co/ZKRsgk6/phone5.png"
+                : "https://i.ibb.co/VxVgkDK/3-1.png"
+            })`
+          }}
+        ></div>
+        <div
+          class="box"
+          style={{
+            backgroundImage: `url(${
+              isMobile()
+                ? "https://i.ibb.co/k5j1FMJ/phone1.png"
+                : "https://i.ibb.co/1LM5Xnv/2.png"
+            })`
+          }}
+        ></div>
 
         <div className="hero-section">
           <img src={main} className="mainGif" alt="mainGif" />
