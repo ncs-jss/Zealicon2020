@@ -209,7 +209,7 @@ header label:after {
 
 .hero-section {
   display: flex;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 55px);
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -238,7 +238,7 @@ header label:after {
 }
 
 .bottom-bar {
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   padding: 10px 0;
   left: 0;
@@ -732,7 +732,7 @@ a.article:hover {
   width: 100vw;
   height: 100vh;
   background-image: url("https://i.ibb.co/hxN2B9f/4-1.png");
-  overflow: hidden;
+  overflow: hidden !important;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -9;
@@ -773,7 +773,7 @@ a.article:hover {
   width: 100vw;
   height: 100vh;
   background-image: url("https://i.ibb.co/VxVgkDK/3-1.png");
-  overflow: hidden;
+  overflow: hidden !important;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -9;
@@ -813,7 +813,7 @@ a.article:hover {
   width: 100vw;
   height: 100vh;
   background-image: url("https://i.ibb.co/1LM5Xnv/2.png");
-  overflow: hidden;
+  overflow: hidden !important;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -9;
@@ -855,7 +855,7 @@ a.article:hover {
   width: 100vw;
   height: 100vh;
   background-image: url("https://i.ibb.co/FKpK1K5/1-1.png");
-  overflow: hidden;
+  overflow: hidden !important;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -9;
@@ -956,9 +956,45 @@ a.article:hover {
 .reach h2 {
   font-size: 40px;
 }
+.modalnew {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.innermodal {
+  padding: 20;
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  min-height: 300px;
+
+  position: relative;
+  min-width: 500px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  justify-content: center;
+  background-image: url(https://i.ibb.co/MPfYbDg/5-1.png);
+  background-color: rgba(0, 0, 0, 0.75);
+  background-blend-mode: multiply;
+  background-size: cover;
+  color: #fff;
+}
 
 @media (max-width: 768px) {
   .reach h2 {
     font-size: 28px;
+  }
+  .modalnew {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .innermodal {
+    min-width: 90vw;
   }
 }

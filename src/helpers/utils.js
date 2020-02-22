@@ -17,3 +17,13 @@ export const axiosGet = (url, data = null) => {
 
   return axios.get(url, options);
 };
+
+export const axiosPost = (url, data = null) => {
+  const options = {
+    headers: {
+      "Content-Type": "application/json;charset=UTF-8"
+    }
+  };
+
+  return axios.post(url, JSON.stringify(data), options);
+};

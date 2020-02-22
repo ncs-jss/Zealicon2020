@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -59,6 +58,7 @@ class Category extends React.Component {
                 <img
                   src="https://i.ibb.co/RDfnzHw/spirograph-2-0.png "
                   className="spiral-image"
+                  alt="category"
                 />
                 <p className="category-text">COLARO</p>
               </Link>
@@ -68,6 +68,7 @@ class Category extends React.Component {
                 <img
                   src="https://i.ibb.co/RDfnzHw/spirograph-2-0.png"
                   className="spiral-image"
+                  alt="category"
                 />
                 <p className="category-text">MECHAVOLTZ</p>
               </Link>
@@ -77,6 +78,7 @@ class Category extends React.Component {
                 <img
                   src="https://i.ibb.co/RDfnzHw/spirograph-2-0.png"
                   className="spiral-image"
+                  alt="category"
                 />
                 <p className="category-text">PLAY IT ON</p>
               </Link>
@@ -86,6 +88,7 @@ class Category extends React.Component {
                 <img
                   src="https://i.ibb.co/RDfnzHw/spirograph-2-0.png"
                   className="spiral-image"
+                  alt="category"
                 />
                 <p className="category-text">ROBOTILES</p>
               </Link>
@@ -95,6 +98,7 @@ class Category extends React.Component {
                 <img
                   src="https://i.ibb.co/RDfnzHw/spirograph-2-0.png"
                   className="spiral-image"
+                  alt="category"
                 />
                 <p className="category-text">Z-WAR</p>
               </Link>
@@ -104,6 +108,7 @@ class Category extends React.Component {
                 <img
                   src="https://i.ibb.co/RDfnzHw/spirograph-2-0.png"
                   className="spiral-image"
+                  alt="category"
                 />
                 <p className="category-text">CODERZ</p>
               </Link>

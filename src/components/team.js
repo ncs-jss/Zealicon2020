@@ -53,6 +53,11 @@ const Team = () => {
       post: "Security Head"
     },
     {
+      img: "https://i.ibb.co/g9wkHPX/p1.png",
+      name: "Akarsh Neeraj",
+      post: "Media & Photography Head"
+    },
+    {
       img: "https://i.ibb.co/JQRVXNP/p13.png",
       name: "Kamal Meghani",
       post: "Management Head "
@@ -69,15 +74,11 @@ const Team = () => {
       post: "Creative Head  "
     },
     {
-      img: "",
+      img: "https://i.ibb.co/9cTR9q2/p24.png",
       name: "Raja Yadav",
       post: "Co-Creative Head  "
     },
-    {
-      img: "https://i.ibb.co/g9wkHPX/p1.png",
-      name: "Akarsh Neeraj",
-      post: "Media & Photography Head"
-    },
+
     {
       img: "https://i.ibb.co/qd26SNp/p10.png",
       name: "Simran Gupta",

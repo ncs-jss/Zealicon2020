@@ -41,6 +41,7 @@ const Reach = () => {
         <div className="row">
           <div className="col-md-12">
             <iframe
+              title="JSSATE Noida"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.5129585806717!2d77.35659471503591!3d28.614384482425013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce518d2daeab9%3A0x91e181c429938a9b!2sJ.S.S.+Academy+of+Technical+Education%2C+Noida!5e0!3m2!1sen!2sin!4v1550401919693"
               width="100%"
               height="400"
