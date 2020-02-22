@@ -265,6 +265,7 @@ const Team = () => {
                     src={data.img}
                     style={{ width: "100%" }}
                     className="team-image"
+                    alt="team"
                   />
                 ) : (
                   <svg
@@ -314,6 +315,7 @@ const Team = () => {
                     src={data.img}
                     style={{ width: "100%" }}
                     className="team-image"
+                    alt="team"
                   />
                 ) : (
                   <svg

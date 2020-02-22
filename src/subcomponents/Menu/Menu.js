@@ -81,10 +81,10 @@ const Menu = ({ open, ...props }) => {
         />
       </Link>
       <Link to="/team">Team</Link>
-      <Link to="/">Sponsors</Link>
-      <Link to="/">Register</Link>
+      <Link to="#">Sponsors</Link>
+      <Link to="#">Register</Link>
       <Link to="/events">Events</Link>
-      <Link to="/">Pronites</Link>
+      <Link to="/reach">Reach Us</Link>
       <Link to="/about">About</Link>
     </StyledMenu>
   );

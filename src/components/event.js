@@ -1,5 +1,5 @@
 import React from "react";
-import { axiosGet } from "../helpers/utils";
+import { axiosGet, isMobile } from "../helpers/utils";
 import { Link } from "react-router-dom";
 class Event extends React.Component {
   state = {
@@ -43,9 +43,11 @@ class Event extends React.Component {
   }
 
   getEventDetail = id => {
-    this.setState(prevState => ({
-      name: !prevState.name
-    }));
+    if (isMobile()) {
+      this.setState(prevState => ({
+        name: !prevState.name
+      }));
+    }
 
     const response = axiosGet("http://backoffice.zealicon.in/api/event/" + id);
     response.then(respo => {
@@ -205,7 +207,6 @@ class Event extends React.Component {
                   </p>
                   <br />
                   <br />
-                  <img src="" id="winner2" width="150px" />
                   <h3 className="semi_bold text-white pt-2  font_bold">
                     Contact
                   </h3>

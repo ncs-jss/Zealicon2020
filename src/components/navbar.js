@@ -13,12 +13,12 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/">
+            <Link to="#">
               <span className="navbar-link">SPONSORS</span>
             </Link>
           </li>
           <li>
-            <Link to="/">
+            <Link to="#">
               <span className="navbar-link">REGISTER</span>
             </Link>
           </li>
@@ -42,8 +42,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/">
-              <span className="navbar-link">PRONITES</span>
+            <Link to="/reach">
+              <span className="navbar-link">REACH US</span>
             </Link>
           </li>
           <li>
