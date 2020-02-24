@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 const Team = () => {
   const ctc = [
     {
-      img: "",
+      img: "https://i.ibb.co/92ptbZ5/p29.png",
       name: "Kushagra Bhardwaj",
       post: "Festival Secretary"
     },
     {
-      img: "",
-      name: "Devansh Monga",
+      img: "https://i.ibb.co/t88Q3cD/p25.png",
+      name: "Devanshu Monga",
       post: "Festival Secretary"
     },
     {
@@ -18,7 +18,7 @@ const Team = () => {
       post: "Festival Co-Secretary"
     },
     {
-      img: "",
+      img: "https://i.ibb.co/CKPjKgD/p31.png",
       name: "Suryansh Udit",
       post: "Festival Co-Secretary"
     },
@@ -28,7 +28,7 @@ const Team = () => {
       post: "Technical Head"
     },
     {
-      img: "https://i.ibb.co/VCPWjJY/p11.png",
+      img: "https://i.ibb.co/QMzBGvZ/p26-1.png",
       name: "Shubham Rana",
       post: "Sponsorship Head"
     },
@@ -38,7 +38,7 @@ const Team = () => {
       post: "Deputy Sponsorship Head"
     },
     {
-      img: "",
+      img: "https://i.ibb.co/JycRWyd/p27.png",
       name: "Karan Bains",
       post: "Artist & Stage Head "
     },
@@ -48,7 +48,7 @@ const Team = () => {
       post: "Cultural Head"
     },
     {
-      img: "",
+      img: "https://i.ibb.co/9rKSjcP/p28.png",
       name: "Shubham Singh",
       post: "Security Head"
     },
@@ -133,7 +133,7 @@ const Team = () => {
       post: "Design Lead"
     },
     {
-      img: "",
+      img: "https://i.ibb.co/C2V3TDz/p30.png",
       name: "Kumar Rohit",
       post: "Design Lead"
     },
@@ -149,7 +149,7 @@ const Team = () => {
     },
     {
       img: "https://i.ibb.co/XY4H8Tm/p15.png",
-      name: "Devansh Choudhary",
+      name: "Devansh Chaudhary",
       post: "Designer"
     },
     {

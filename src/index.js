@@ -28,4 +28,4 @@ const Root = () => (
   </BrowserRouter>
 );
 ReactDOM.render(<Root />, document.getElementById("root"));
-serviceWorker.unregister();
+serviceWorker.register();

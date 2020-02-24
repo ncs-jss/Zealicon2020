@@ -2,12 +2,14 @@ import React from "react";
 import { axiosGet, isMobile } from "../helpers/utils";
 import { Link } from "react-router-dom";
 import Modal from "../subcomponents/modal";
+import Loader from "../subcomponents/loader";
 class Event extends React.Component {
   state = {
     name: false,
     eventList: [],
     individual: {},
-    modal: false
+    modal: false,
+    isLoading: true
   };
   sidebarActive = () => {
     this.setState(prevState => ({
@@ -54,7 +56,8 @@ class Event extends React.Component {
         });
         response.then(respo => {
           this.setState({
-            individual: respo.data.data
+            individual: respo.data.data,
+            isLoading: false
           });
         });
         response.catch(erro => {
@@ -68,10 +71,14 @@ class Event extends React.Component {
   }
 
   getEventDetail = id => {
+    this.setState({
+      isLoading: true
+    });
     const response = axiosGet("http://backoffice.zealicon.in/api/event/" + id);
     response.then(respo => {
       this.setState({
-        individual: respo.data.data
+        individual: respo.data.data,
+        isLoading: false
       });
     });
     response.catch(erro => {
@@ -144,137 +151,153 @@ class Event extends React.Component {
             </nav>
 
             <div id="content">
-              <div
-                className="container-fluid d-flex  d-md-none"
-                style={{
-                  justifyContent: "space-between",
-                  alignItems: "center"
-                }}
-              >
-                <button
-                  type="button"
-                  id="sidebarCollapse"
-                  className="btn btn-link"
-                  onClick={this.sidebarActive}
-                >
-                  <svg
-                    className="svg-inline--fa fa-align-left fa-w-14"
-                    aria-hidden="true"
-                    data-prefix="fas"
-                    data-icon="align-left"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                    data-fa-i2svg=""
+              {this.state.isLoading ? (
+                <Loader />
+              ) : (
+                <>
+                  <div
+                    className="container-fluid d-flex  d-md-none"
+                    style={{
+                      justifyContent: "space-between",
+                      alignItems: "center"
+                    }}
                   >
-                    <path
-                      fill="currentColor"
-                      d="M288 44v40c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16V44c0-8.837 7.163-16 16-16h256c8.837 0 16 7.163 16 16zM0 172v40c0 8.837 7.163 16 16 16h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16zm16 312h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm256-200H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16h256c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16z"
-                    ></path>
-                  </svg>
-                </button>
-                <img
-                  src="https://i.ibb.co/DKcQwp4/Logo-Final.png"
-                  alt="Logo-Final-1"
-                  border="0"
-                  style={{ height: "50px" }}
-                />
-              </div>
-              <div className="container-fluid pt-3">
-                <div className="row">
-                  <div className="col-md-8">
-                    <h2 className="text-center eventHead font-weight-bold">
-                      {categoryId == 1
-                        ? "COLORALO"
-                        : categoryId == 2
-                        ? "MECHAVOLTZ"
-                        : categoryId == 3
-                        ? "PLAY IT ON"
-                        : categoryId == 4
-                        ? "ROBOTILES"
-                        : categoryId == 5
-                        ? "CODERZ"
-                        : "Z-WARS"}
-                    </h2>
-                  </div>
-                  <div className="col-md-3 offset-md-1 white_image">
+                    <button
+                      type="button"
+                      id="sidebarCollapse"
+                      className="btn btn-link"
+                      onClick={this.sidebarActive}
+                    >
+                      <svg
+                        className="svg-inline--fa fa-align-left fa-w-14"
+                        aria-hidden="true"
+                        data-prefix="fas"
+                        data-icon="align-left"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        data-fa-i2svg=""
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M288 44v40c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16V44c0-8.837 7.163-16 16-16h256c8.837 0 16 7.163 16 16zM0 172v40c0 8.837 7.163 16 16 16h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16zm16 312h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm256-200H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16h256c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16z"
+                        ></path>
+                      </svg>
+                    </button>
                     <img
                       src="https://i.ibb.co/DKcQwp4/Logo-Final.png"
                       alt="Logo-Final-1"
                       border="0"
-                      className="logo-image d-none d-md-block"
+                      style={{ height: "50px" }}
                     />
                   </div>
-                </div>
-              </div>
-              <div className="container-fluid">
-                <div className="row">
-                  <div className="col-md-8">
-                    <h2
-                      className="font-weight-bold text-white pb-2 pt-2"
-                      id="event_title"
-                      // style="font-size: 24px; text-transform: uppercase;"
-                    >
-                      {individual && individual.name} (
-                      <span className="font-weight-normal">
-                        {this.returnDate(individual && individual.day)})
-                      </span>
-                    </h2>
-                    <p
-                      className="font_light"
-                      id="event_description"
-                      // style="color: rgba(255,255,255,0.8);"
-                    ></p>
-                    <p id="description">
-                      {individual && individual.description}
-                    </p>
-                    <h3 className="font-weight-bold my-2">Rules</h3>
-                    <p id="description">{individual && individual.rules}</p>
+                  <div className="container-fluid pt-3">
+                    <div className="row">
+                      <div className="col-md-8">
+                        <h2 className="text-center eventHead mb-4 font-weight-bold">
+                          {categoryId == 1
+                            ? "COLORALO"
+                            : categoryId == 2
+                            ? "MECHAVOLTZ"
+                            : categoryId == 3
+                            ? "PLAY IT ON"
+                            : categoryId == 4
+                            ? "ROBOTILES"
+                            : categoryId == 5
+                            ? "CODERZ"
+                            : "Z-WARS"}
+                        </h2>
+                      </div>
+                      <div className="col-md-3 offset-md-1 white_image">
+                        <img
+                          src="https://i.ibb.co/DKcQwp4/Logo-Final.png"
+                          alt="Logo-Final-1"
+                          border="0"
+                          className="logo-image d-none d-md-block"
+                        />
+                      </div>
+                    </div>
                   </div>
-                  <div className="col-md-3 offset-md-1 white_image">
-                    <h3 className="semi_bold text-white pt-4 pb-2  font_bold">
-                      Prizes
-                    </h3>
-                    <p>
-                      Winner1:{" "}
-                      <b className="pl-1">{individual && individual.winner1}</b>
-                    </p>
-                    <p>
-                      Winner2:{" "}
-                      <b className="pl-1">{individual && individual.winner2}</b>
-                    </p>
-                    <br />
-                    <br />
-                    <h3 className="semi_bold text-white pt-2  font_bold">
-                      Contact
-                    </h3>
-                    <p
-                      className="font_regular text-white mb-0"
-                      id="contact_name"
-                      style={{ textTransform: "capitalize" }}
-                    >
-                      {individual && individual.contact_name}
-                    </p>
-                    <p className="font_regular text-white" id="contact_number">
-                      {individual && individual.contact_no}
-                    </p>
-                    <button
-                      className="btn btn-primary"
-                      onClick={this.showModal}
-                    >
-                      Register Here
-                    </button>
-                    &nbsp;
-                    {/* <a */}
-                    {/*   href="http://eventmanager.zealicon.in" */}
-                    {/*   target="_blank" */}
-                    {/*   className="btn btn-primary" */}
-                    {/* > */}
-                    {/*   Notification */}
-                    {/* </a> */}
+                  <div className="container-fluid">
+                    <div className="row">
+                      <div className="col-md-8">
+                        <h2
+                          className="font-weight-bold text-white pb-2 pt-2"
+                          id="event_title"
+                          // style="font-size: 24px; text-transform: uppercase;"
+                        >
+                          {individual && individual.name}
+                          <p
+                            className="font-weight-normal"
+                            style={{ fontSize: "19px" }}
+                          >
+                            ({this.returnDate(individual && individual.day)})
+                          </p>
+                        </h2>
+                        <p
+                          className="font_light"
+                          id="event_description"
+                          // style="color: rgba(255,255,255,0.8);"
+                        ></p>
+                        <p id="description">
+                          {individual && individual.description}
+                        </p>
+                        <h3 className="font-weight-bold my-2">Rules</h3>
+                        <p className="rules">
+                          {individual && individual.rules}
+                        </p>
+                      </div>
+                      <div className="col-md-3 offset-md-1 event-left">
+                        <h3 className="text-white pt-4 pb-2 ">Prizes</h3>
+                        <p>
+                          Winner1:{" "}
+                          <b className="pl-1">
+                            {individual && individual.winner1}
+                          </b>
+                        </p>
+                        <p>
+                          Winner2:{" "}
+                          <b className="pl-1">
+                            {individual && individual.winner2}
+                          </b>
+                        </p>
+                        <br />
+                        <br />
+                        <h3 className="semi_bold text-white pt-2  font_bold">
+                          Contact
+                        </h3>
+                        <p
+                          className="font_regular text-white mb-0"
+                          id="contact_name"
+                          style={{ textTransform: "capitalize" }}
+                        >
+                          {individual && individual.contact_name}
+                        </p>
+                        <p
+                          className="font_regular text-white"
+                          id="contact_number"
+                        >
+                          {individual && individual.contact_no}
+                        </p>
+                        <button
+                          className="btn btn-primary"
+                          onClick={this.showModal}
+                        >
+                          Register Here
+                        </button>
+                        &nbsp;
+                        {/* <a */}
+                        {/*   href="http://eventmanager.zealicon.in" */}
+                        {/*   target="_blank" */}
+                        {/*   className="btn btn-primary" */}
+                        {/* > */}
+                        {/*   Notification */}
+                        {/* </a> */}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
+                </>
+              )}
             </div>
           </div>
         </div>

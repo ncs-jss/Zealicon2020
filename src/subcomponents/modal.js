@@ -1,38 +1,43 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { axiosPost } from "../helpers/utils";
 import axios from "axios";
 class Modal extends Component {
   state = {
     name: "",
     email: "",
     zeal: "",
-    phone: ""
+    phone: "",
+    message: ""
   };
   handleSubmit = e => {
     e.preventDefault();
-    const data = {
-      name: this.state.name,
-      email: this.state.email,
-      event_id: this.props.event.id,
-      contact_no: this.state.phone,
-      zeal_id: this.state.zeal
-    };
-
-    const options = {
-      headers: {
-        "Content-Type": "application/json"
-      }
-    };
 
     axios
-      .post(
-        "http://backoffice.zealicon.in/api/event/participate",
-        data,
-        options
+      .get(
+        "http://backoffice.zealicon.in/api/event/participate?" +
+          "name=" +
+          this.state.name +
+          "&&" +
+          "email=" +
+          this.state.email +
+          "&&" +
+          "event_id=" +
+          this.props.event.id +
+          "&&" +
+          "contact_no=" +
+          this.state.phone +
+          "&&" +
+          "zeal_id=" +
+          this.state.zeal
       )
       .then(res => {
-        console.log("RESPONSE ==== : ", res);
+        this.setState({
+          message: res.data.message,
+          name: "",
+          email: "",
+          phone: "",
+          zeal: ""
+        });
       })
       .catch(err => {
         console.log("ERROR: ====", err);
@@ -62,6 +67,7 @@ class Modal extends Component {
                 name="name"
                 value={this.state.name}
                 onChange={this.handleChange}
+                required
               />
             </div>
             <div className="form-group">
@@ -73,6 +79,7 @@ class Modal extends Component {
                 name="email"
                 value={this.state.email}
                 onChange={this.handleChange}
+                required
               />
             </div>
             <div className="form-group">
@@ -80,10 +87,11 @@ class Modal extends Component {
               <input
                 type="number"
                 className="form-control"
-                placeholder="Enter Contact No."
+                placeholder="Enter Contact No.(10 digits)"
                 name="phone"
                 value={this.state.phone}
                 onChange={this.handleChange}
+                required
               />
             </div>
             <div className="form-group">
@@ -95,8 +103,10 @@ class Modal extends Component {
                 name="zeal"
                 value={this.state.zeal}
                 onChange={this.handleChange}
+                required
               />
             </div>
+            <p className="text-center">{this.state.message}</p>
             <div className="d-flex" style={{ justifyContent: "space-between" }}>
               <button type="submit" className="btn btn-primary">
                 Submit

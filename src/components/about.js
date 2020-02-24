@@ -48,6 +48,7 @@ const Team = () => {
       </div>
       <div className="container mt-3">
         <h2 className="text-center mb-5">ABOUT ZEALICON</h2>
+
         <p className="text-justify about-content">
           Zealicon is the annual techno-cultural festival of JSSATE, Noida.
           Dedicated to the celebration of creativity and science, it is a
@@ -58,6 +59,19 @@ const Team = () => {
           events including band performances, discussions, film screenings that
           are spread over four days.
         </p>
+        <div className="row">
+          <div className="col-md-6 offset-md-3">
+            <iframe
+              title="After Movie 2019"
+              width="100%"
+              src="https://www.youtube.com/embed/zRidlFAR00A"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen=""
+            ></iframe>
+          </div>
+        </div>
+
         <p className="text-justify about-content">
           Apart from the exuberant cultural events, Zealicon is also known for
           its mind boggling technical events that creates an ambience for the

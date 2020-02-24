@@ -34,7 +34,7 @@ const SideBar = () => {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <div ref={node} className="d-md-none">
+        <div ref={node} className="d-lg-none">
           <FocusLock disabled={!open}>
             <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
             <Menu open={open} setOpen={setOpen} id={menuId} />

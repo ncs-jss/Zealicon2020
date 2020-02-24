@@ -18,9 +18,9 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="#">
+            <a href="http://registerzealicon.surge.sh/" target="_blank">
               <span className="navbar-link">REGISTER</span>
-            </Link>
+            </a>
           </li>
         </ul>
 
