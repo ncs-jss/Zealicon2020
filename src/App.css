@@ -269,6 +269,23 @@ header label:after {
 }
 
 
+.about {
+  background-image: url("https://i.ibb.co/Jvw8w6Z/sebastian-ervi-Qq2h76k-YRFI-unsplash-1.jpg");
+  background-position: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: #fff;
+  font-weight: bold;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.65);
+  background-blend-mode: multiply;
+}
+.about h2 {
+  font-size: 40px;
+}
+
+
 
 .team {
   background-image: url("./3-2.jpg");
@@ -279,6 +296,8 @@ header label:after {
   color: #fff;
   font-weight: bold;
   overflow-y: auto;
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: multiply;
 }
 .team h2 {
   font-size: 40px;
@@ -309,6 +328,11 @@ header label:after {
   padding-right: 4rem !important;
 }
 
+@media(max-width: 768px) {
+  .team {
+    background-image: url('https://i.ibb.co/NL62h1c/Team.png')
+  }
+}
 
 .a,.b{fill:#fff;
   font-size:30px;
@@ -429,8 +453,23 @@ svg:hover {
   text-align: left;
 }
 
+
+
 @media (max-width: 768px) {
   .team h2 {
+    font-size: 28px;
+  }
+
+  .about {
+    background-image: url('https://i.ibb.co/bsWMXHy/Events-and-about-mobile.jpg')!important;
+  }
+
+  .category {
+    background-image: url('https://i.ibb.co/bsWMXHy/Events-and-about-mobile.jpg')!important;
+  }
+
+
+  .about h2 {
     font-size: 28px;
   }
   .team-heading h3 {
@@ -450,20 +489,29 @@ svg:hover {
     font-size: 1rem;
   }
 }
-
 .category {
-  background-image: url("./music.jpg");
+  background-image: url('https://i.ibb.co/Jvw8w6Z/sebastian-ervi-Qq2h76k-YRFI-unsplash-1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: fixed;
-  height: calc(100vh + 10px);
-  
+  height: 100vh;
+  max-height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
   background-blend-mode: multiply;
-  overflow-y: auto;
-  z-index: 999;
-  margin-top: -10px;
-  
+  overflow: hidden;
+}
+
+.owl-prev , .owl-next {
+  color: #fff!important;
+}
+
+.category-page {
+  height: 90vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .single-category {
@@ -903,7 +951,7 @@ a.article:hover {
   height: 0px;
   overflow: hidden;
 
-  background: url("./1.jpg");
+  background: url("./phone1.jpg");
   background-attachment: fixed;
   background-position: center center;
   border-radius: 50%;
@@ -1011,6 +1059,11 @@ a.article:hover {
   overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
+}
+@media(max-width: 768px) {
+  .reach {
+    background-image: url("./phone1.jpg")
+  }
 }
 
 .reach h2 {
@@ -1234,4 +1287,46 @@ a.article:hover {
 		transform: translate(-50%, -50%) scale(1);
 		opacity: 0;
 	}
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
 }

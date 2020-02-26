@@ -13,7 +13,7 @@ const Team = () => {
       post: "Festival Secretary"
     },
     {
-      img: "",
+      img: "https://i.ibb.co/Kw7zCXm/p33.png",
       name: "Raman Khatri",
       post: "Festival Co-Secretary"
     },
@@ -53,6 +53,11 @@ const Team = () => {
       post: "Security Head"
     },
     {
+      img: "https://i.ibb.co/cXKJMP9/pp8.png",
+      name: "Prakhar Agnihotri",
+      post: "Deputy Security Head"
+    },
+    {
       img: "https://i.ibb.co/g9wkHPX/p1.png",
       name: "Akarsh Neeraj",
       post: "Media & Photography Head"
@@ -62,12 +67,7 @@ const Team = () => {
       name: "Kamal Meghani",
       post: "Management Head "
     },
-    ,
-    {
-      img: "https://i.ibb.co/cXKJMP9/pp8.png",
-      name: "Prakhar Agnihotri",
-      post: "Deputy Security Head"
-    },
+
     {
       img: "https://i.ibb.co/L1vQm3J/p7.png",
       name: "Amit Singh",
@@ -85,7 +85,7 @@ const Team = () => {
       post: "Student Welfare & Outreach Head"
     },
     {
-      img: "",
+      img: "https://i.ibb.co/0Mhv97s/p32.png",
       name: "Piyush Kumar",
       post: "Scheduling Head  "
     },
@@ -100,7 +100,7 @@ const Team = () => {
       post: "Marketing Head"
     },
     {
-      img: "",
+      img: "https://i.ibb.co/5GYxGMc/p36.png",
       name: "Akriti Sundaram",
       post: "P.A. System Head"
     },
@@ -113,7 +113,7 @@ const Team = () => {
 
   const team = [
     {
-      img: "https://i.ibb.co/rMmkWwQ/p10-1-1.png",
+      img: "https://i.ibb.co/640S8Rj/p34-1.png",
       name: "Rohit Jakhmola",
       post: "Tech Lead"
     },
@@ -146,6 +146,11 @@ const Team = () => {
       img: "https://i.ibb.co/XJxBLD7/p17.png",
       name: "Shubham Pathak",
       post: "App Developer"
+    },
+    {
+      img: "https://i.ibb.co/sKQgjgj/p35.png",
+      name: "Sarthak Chauhan",
+      post: "Designer"
     },
     {
       img: "https://i.ibb.co/XY4H8Tm/p15.png",

@@ -5,7 +5,7 @@ import sound3 from "../audio/3.mp3";
 import sound4 from "../audio/4.mp3";
 import sound5 from "../audio/5.mp3";
 import { withRouter } from "react-router-dom";
-
+import brochure from "../brochure.pdf";
 const useAudio = url => {
   const sounds = [sound1, sound2, sound3, sound4, sound5];
   const [currentSound, changeSound] = useState(
@@ -123,7 +123,7 @@ const Player = ({ url }) => {
                 height="24.586"
                 viewBox="0 0 23.821 24.586"
                 className="mr-2"
-                onClick={forward}
+                onClick={backward}
               >
                 <g
                   className="aa"
@@ -212,7 +212,8 @@ const Player = ({ url }) => {
                 width="23.821"
                 height="24.586"
                 viewBox="0 0 23.821 24.586"
-                onClick={backward}
+                onClick={forward}
+                className="mr-2"
               >
                 <g class="aa">
                   <g transform="translate(0 0)">
@@ -241,7 +242,7 @@ const Player = ({ url }) => {
                 />
                 <div>
                   <a
-                    href="https://imgbb.com/"
+                    href="https://g.co/kgs/Trr4mb"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mr-2"
@@ -281,7 +282,7 @@ const Player = ({ url }) => {
                     />
                   </a>
                   <a
-                    href="https://imgbb.com/"
+                    href="https://facebook.com/zealicon"
                     target="_blank"
                     className="mr-2"
                     rel="noopener noreferrer"
@@ -292,6 +293,52 @@ const Player = ({ url }) => {
                       border="0"
                       className="social"
                     />
+                  </a>
+                  <a href={brochure} target="_blank" className="mr-2" download>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 500 500"
+                      className="social"
+                    >
+                      <g
+                        id="Group_6"
+                        data-name="Group 6"
+                        transform="translate(-654 5507)"
+                      >
+                        <circle
+                          id="Ellipse_1"
+                          data-name="Ellipse 1"
+                          cx="250"
+                          cy="250"
+                          r="250"
+                          transform="translate(654 -5507)"
+                          fill="#fff"
+                        />
+                        <g
+                          id="noun_Save_2209758"
+                          transform="translate(1444.505 -4036.5)"
+                        >
+                          <g
+                            id="Group_5"
+                            data-name="Group 5"
+                            transform="translate(-679.621 -1358.5)"
+                          >
+                            <path
+                              id="Path_6"
+                              data-name="Path 6"
+                              d="M318.61,270.289v61.4a13.975,13.975,0,0,1-.437,3.406h0a13.186,13.186,0,0,1-12.84,10.569H54.389a13.142,13.142,0,0,1-13.015-11.7,10.346,10.346,0,0,1-.175-2.358V270.2a13.1,13.1,0,0,1,26.2,0v49.176h225.09V270.2a13.094,13.094,0,0,1,22.361-9.259A13.835,13.835,0,0,1,318.61,270.289Z"
+                              transform="translate(-41.2 -68.783)"
+                            />
+                            <path
+                              id="Path_7"
+                              data-name="Path 7"
+                              d="M263.975,181.515,199.6,245.889c-.087.175-.262.262-.349.349a15.169,15.169,0,0,1-8.473,4.28c-.262,0-.524.087-.786.087a9.494,9.494,0,0,1-1.572.087h0l-1.485-.087c-.262,0-.524-.087-.786-.087a14.9,14.9,0,0,1-8.473-4.28l-.349-.349-64.374-64.374a15.317,15.317,0,0,1,21.662-21.662l38.694,38.694V56.785A15.359,15.359,0,0,1,188.6,41.5a15.625,15.625,0,0,1,10.831,4.455,15.1,15.1,0,0,1,4.455,10.831V198.548l38.694-38.694a15.394,15.394,0,0,1,21.662,0A15.644,15.644,0,0,1,263.975,181.515Z"
+                              transform="translate(-49.716 -41.5)"
+                            />
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
                   </a>
                 </div>
               </div>

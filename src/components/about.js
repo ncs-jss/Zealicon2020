@@ -2,17 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Team = () => {
-  const back =
-    "https://i.ibb.co/qYSFLVf/sebastian-ervi-Qq2h76k-YRFI-unsplash.jpg";
   return (
-    <div
-      className="team pt-5"
-      style={{
-        backgroundImage: `url(${back})`,
-        backgroundBlendMode: "multiply",
-        backgroundColor: "rgba(0,0,0,0.65)"
-      }}
-    >
+    <div className="about pt-5">
       <div className="team-top container-fluid">
         <Link to="/">
           <svg
@@ -75,14 +66,14 @@ const Team = () => {
         <p className="text-justify about-content">
           Apart from the exuberant cultural events, Zealicon is also known for
           its mind boggling technical events that creates an ambience for the
-          technocrats. Zealicon 2019 will cover the aspects of hysterical face
+          technocrats. Zealicon 2020 will cover the aspects of hysterical face
           of literature along with popular arts, science and technology. This
           edition of Zealicon promises all the trademarks of the earlier
           versions. A plethora of events where academicians will vouch out their
           intellect and artists will showcase the best of art. Projecting the
           fictitious gesture onto the real world, Zealicon will act as a
           connecting link between the fantasy and reality. Creating an aura of
-          avidity and togetherness, We hope that Zealicon 2019 will turn out to
+          avidity and togetherness, We hope that Zealicon 2020 will turn out to
           be a memorable experience for you !
         </p>
       </div>
