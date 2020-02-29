@@ -5,109 +5,130 @@ const Team = () => {
     {
       img: "https://i.ibb.co/92ptbZ5/p29.png",
       name: "Kushagra Bhardwaj",
-      post: "Festival Secretary"
+      post: "Festival Secretary",
+      insta: "https://www.instagram.com/kushagra.bhardwaj12.1/"
     },
     {
       img: "https://i.ibb.co/t88Q3cD/p25.png",
       name: "Devanshu Monga",
-      post: "Festival Secretary"
+      post: "Festival Secretary",
+      insta: "https://www.instagram.com/devanshumonga/"
     },
     {
       img: "https://i.ibb.co/Kw7zCXm/p33.png",
       name: "Raman Khatri",
-      post: "Festival Co-Secretary"
+      post: "Festival Co-Secretary",
+      insta: "https://www.instagram.com/ramankhatri97/"
     },
     {
       img: "https://i.ibb.co/CKPjKgD/p31.png",
       name: "Suryansh Udit",
-      post: "Festival Co-Secretary"
+      post: "Festival Co-Secretary",
+      insta: "https://www.instagram.com/suryansh1004/"
     },
     {
       img: "https://i.ibb.co/PGzVfDp/p14-1.png",
       name: "Kunal Vishnoi",
-      post: "Technical Head"
+      post: "Technical Head",
+      insta: "https://www.instagram.com/kunalvishnoi31/"
     },
     {
       img: "https://i.ibb.co/QMzBGvZ/p26-1.png",
       name: "Shubham Rana",
-      post: "Sponsorship Head"
+      post: "Sponsorship Head",
+      insta: "https://www.instagram.com/shubhamrana2409"
     },
     {
       img: "https://i.ibb.co/DfDjnDH/p8.png",
       name: "Nancy Poddar",
-      post: "Deputy Sponsorship Head"
+      post: "Deputy Sponsorship Head",
+      insta: "https://www.instagram.com/nancy_poddar8/"
     },
     {
       img: "https://i.ibb.co/JycRWyd/p27.png",
       name: "Karan Bains",
-      post: "Artist & Stage Head "
+      post: "Artist & Stage Head ",
+      insta: "https://www.instagram.com/karanbains.bains/"
     },
     {
       img: "https://i.ibb.co/1zS0Ctm/p5.png",
       name: "Abhinav Singh",
-      post: "Cultural Head"
+      post: "Cultural Head",
+      insta: "https://www.instagram.com/abhnv_sgh"
     },
     {
       img: "https://i.ibb.co/9rKSjcP/p28.png",
       name: "Shubham Singh",
-      post: "Security Head"
+      post: "Security Head",
+      insta: "https://www.instagram.com/the_variable_007"
     },
     {
       img: "https://i.ibb.co/cXKJMP9/pp8.png",
       name: "Prakhar Agnihotri",
-      post: "Deputy Security Head"
+      post: "Deputy Security Head",
+      insta: "https://www.instagram.com/prakhar.agnihotri.27/"
     },
     {
       img: "https://i.ibb.co/g9wkHPX/p1.png",
       name: "Akarsh Neeraj",
-      post: "Media & Photography Head"
+      post: "Media & Photography Head",
+      insta: "https://www.instagram.com/ans_snap.it.yaar"
     },
     {
       img: "https://i.ibb.co/JQRVXNP/p13.png",
       name: "Kamal Meghani",
-      post: "Management Head "
+      post: "Management Head ",
+      insta: "https://www.instagram.com/kamal_menghani"
     },
 
     {
       img: "https://i.ibb.co/L1vQm3J/p7.png",
       name: "Amit Singh",
-      post: "Creative Head  "
+      post: "Creative Head  ",
+      insta: "https://www.instagram.com/mr_jeet_._/"
     },
     {
       img: "https://i.ibb.co/9cTR9q2/p24.png",
       name: "Raja Yadav",
-      post: "Co-Creative Head  "
+      post: "Co-Creative Head  ",
+      insta: "https://www.instagram.com/raja.yadav2/"
     },
 
     {
       img: "https://i.ibb.co/qd26SNp/p10.png",
       name: "Simran Gupta",
-      post: "Student Welfare & Outreach Head"
+      post: "Student Welfare & Outreach Head",
+      insta: "https://www.instagram.com/simran0209gpt"
     },
     {
       img: "https://i.ibb.co/0Mhv97s/p32.png",
       name: "Piyush Kumar",
-      post: "Scheduling Head  "
+      post: "Scheduling Head  ",
+      insta: "#"
     },
     {
       img: "https://i.ibb.co/n0gJWJ0/p2.png",
       name: "Vishal Dixit",
-      post: "Marketing Head"
+      post: "Marketing Head",
+      insta: "https://www.instagram.com/vishal_dixit_0107"
     },
     {
       img: "https://i.ibb.co/C79Kbdv/p6.png",
       name: "Ishita",
-      post: "Marketing Head"
+      post: "Marketing Head",
+      insta: "https://www.instagram.com/ishi_0912"
     },
     {
       img: "https://i.ibb.co/5GYxGMc/p36.png",
       name: "Akriti Sundaram",
-      post: "P.A. System Head"
+      post: "P.A. System Head",
+      insta: "#"
     },
     {
       img: "https://i.ibb.co/4VppMwn/p9.png",
       name: "Tijil Shandilya",
-      post: "Resource Head"
+      post: "Resource Head",
+      insta: "https://www.instagram.com/shan_tijilicious"
     }
   ];
 
@@ -266,36 +287,25 @@ const Team = () => {
           {ctc.map((data, index) => {
             return (
               <div className="col-md-2 mt-2 mb-3 col-6 text-center" key={index}>
-                {data.img.length > 2 ? (
+                <div className="overlay">
                   <img
                     src={data.img}
                     style={{ width: "100%" }}
-                    className="team-image"
+                    className="team-image new"
                     alt="team"
                   />
-                ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="100%"
-                    viewBox="0 0 220.278 238.155"
-                    className="team-image"
-                  >
-                    <g transform="translate(2.508 2.512)">
-                      <g transform="translate(0 0)">
-                        <path
-                          className="a1"
-                          d="M235.556,88.458c-.145,57.312-62.031,164.826-104.2,164.737S27.859,145.242,28,87.93c.128-48.347,46.619-60.487,103.936-60.342S235.65,45.558,235.556,88.458Z"
-                          transform="translate(-17.787 -17.551)"
-                        />
-                        <path
-                          className="b1"
-                          d="M188.395,27.183c30.692,48.4,36.33,172.332.723,194.923s-145.312-35.369-176-83.771C-12.779,97.507,19.9,62.271,68.3,31.578S165.421-9.045,188.395,27.183Z"
-                          transform="translate(-3.998 -4.002)"
-                        />
-                      </g>
-                    </g>
-                  </svg>
-                )}
+                  <div className="middle">
+                    <a href={data.insta} target="_blank">
+                      <img
+                        src="https://i.ibb.co/xYmQRP3/011-instagram.png"
+                        width="30px"
+                        className="team-insta"
+                        rel="noopener noreferrer"
+                      />
+                    </a>
+                  </div>
+                </div>
+
                 <p className="font-weight-bold mt-3 mb-0">{data.name}</p>
                 <span className="mb-1 fest-post">{data.post}</span>
               </div>

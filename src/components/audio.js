@@ -265,7 +265,6 @@ const Player = ({ url }) => {
                       alt="011-instagram"
                       border="0"
                       className="social"
-                      rel="noopener noreferrer"
                     />
                   </a>
                   <a
